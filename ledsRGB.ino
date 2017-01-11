@@ -1,12 +1,12 @@
 #include "funciones.h"
 
-
 void setup() {
-  pinMode(ledR, OUTPUT);
-  pinMode(ledG, OUTPUT);
-  pinMode(ledB, OUTPUT);
+  for (int colors = 0; colors < 3; colors++) { // 3 colores: Red, Green, Blue
+    pinMode(pin[colors], OUTPUT);
+  }
 }
 
-void loop() { 
-  fade(ledR);
+void loop() {
+  // Hago fade() a un color aleatorio.
+  fade(pin[random(0, 2)]);
 }

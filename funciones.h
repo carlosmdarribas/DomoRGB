@@ -1,9 +1,6 @@
-//Pines de los LED
-#define ledR 8
-#define ledG 9
-#define ledB 10
-
+// Array de pines en los que están los LED conectados.
+extern int pin[3]; // 3 Colores. Definido en funciones.cpp
 
 //Prototipos:
-void fade(int, int );
-void allColours(int);
+void fade(int led, int vel_fade);
+void allColours(int u_delay);
